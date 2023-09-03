@@ -21,7 +21,7 @@ provider "cloudflare" {
 
 resource "digitalocean_ssh_key" "rocketchat_ssh_key"{
     name = "rocketchat_ssh_key"
-    public_key = file(abspath("./res/chat.mountainadevnturehouse.com.pub"))
+    public_key = file(abspath("./res/id_rsa.pub"))
 }
 
 resource "digitalocean_droplet" "rocketchat_droplet" {
