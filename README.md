@@ -14,8 +14,24 @@ All settings are set in `variables.tf`. You can either set them when deploying, 
 your own `terraform.tfvars` file and deploy. To setup:
 
 1. Clone the repository
-2. `cd` into the repository and run `terraform apply`
-3. If you have no created a `terraform.tfvars` you will be prompted for all of the parameters. This includes your Digital Ocean and CloudFlare keys along with configuration details for your deployment
+2. `cd` into the repository 
+3. Run the following commands to generate your ssh key:
+    ```bash
+    mkdir res
+    cd res
+    ssh-keygen -f ./id_rsa -N ""
+    cd ..
+    ```
+4. Run `terraform apply`
+5. If you have no created a `terraform.tfvars` you will be prompted for all of the parameters. This includes your Digital Ocean and CloudFlare keys along with configuration details for your deployment
+
+Later, if you wish to connect to SSH into your digital ocean instance, you can with the following steps:
+
+1. Retrieve the public ip of the Digital Ocean server by running `terraform output`
+2. Login to the server by running the following command:
+    ```bash
+    ssh root@<ip> -i ./res/id_rsa
+    ```
 
 # Settings
 The settings in the `variables.tf` are as follows:
