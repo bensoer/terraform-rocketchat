@@ -1,9 +1,9 @@
 output "ip" {
-    value = digitalocean_droplet.chatmountainadventurehousecom.ipv4_address
+    value = digitalocean_droplet.rocketchat_droplet.ipv4_address
 }
 output "name" {
-    value = digitalocean_droplet.chatmountainadventurehousecom.name
+    value = digitalocean_droplet.rocketchat_droplet.name
 }
 output "size" {
-    value = digitalocean_droplet.chatmountainadventurehousecom.size
+    value = digitalocean_droplet.rocketchat_droplet.size
 }
