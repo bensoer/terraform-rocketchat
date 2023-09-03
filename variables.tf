@@ -27,15 +27,3 @@ variable "cf_sub_domain" {
     description = "Sub domain under the cf_domain to host rocketchat. If not supplied, 'chat' will be used"
     default = "chat"
 }
-
-variable "aws_access_key_id" {
-    description = "AWS Access Key Id"
-    sensitive = true
-    type = string
-}
-
-variable "aws_secret_access_key" {
-    description = "AWS Secret Access Key"
-    sensitive = true
-    type = string
-}
