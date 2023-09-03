@@ -2,6 +2,10 @@
 
 A simple project that sets up a RocketChat chat server on Digital Ocean and CloudFlare.
 
+For RocketChat documentation on setting up RocketChat on Digital Ocean, see : https://docs.rocket.chat/deploy/deploy-rocket.chat/additional-deployment-methods/digitalocean
+
+For documentation from Digital Ocean on the image that is deployed by Terraform, see : https://marketplace.digitalocean.com/apps/rocket-chat
+
 # Prerequisites
 - Terraform v1.5.3
 
@@ -22,4 +26,3 @@ The settings in the `variables.tf` are as follows:
 | cf_email | Your CloudFlare authentication email |
 | cf_domain | The root domain in CloudFlare that this RocketChat server will be hosted under |
 | cf_sub_domain | The sub domain in CloudFlare that this RocketChat server will be hoested under. By default the DNS value of "chat.<your domain>" will be pointed at the Digital Ocean server. You can change the `chat` value with this parameter |
-| 
