@@ -62,7 +62,7 @@ resource "cloudflare_record" "rocketchat_domain_cname" {
     proxied = false
 }
 
-resource "cloudflare_record" "chatmountainadventurehousecom-a" {
+resource "cloudflare_record" "rocketchat_domain_a" {
     zone_id = lookup(data.cloudflare_zones.rocketchat_domain_lookup.zones[0], "id")
     name = "${var.cf_sub_domain}"
     type = "A"
